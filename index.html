@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta charset="UTF-8">
+  <title>전 광</title>
+  <style>
+	/* 세로모드이면 강제로 가로모드로 전환 */
+	  @media( orientation: portrait ){
+    html {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100vh;
+      height: 100vw;
+    }
+  }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	/* 1줄 전광판모드 -- One-line Marquee */
+	.marquee {
+		height: 100vh;
+	}
+	.track {
+		height: 100%;
+	}
+</style>
+</head>
+<body>
+<!-- <div class="marquee">
+	<div class="track">
+		<span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span>
+	</div>
+</div> -->
+
+<div class="marquee">
+	<div class="track">
+		<span class="text -twox" style="font-size: 70vh;">Marquee.<span class="-green">Marquee.</span>❤️</span>
+		<span class="text -twox" style="font-size: 70vh;">Marquee.<span class="-green">Marquee.</span>❤️</span>
+		<span class="text -twox" style="font-size: 70vh;">Marquee.<span class="-green">Marquee.</span>❤️</span>
+		<span class="text -twox" style="font-size: 70vh;">Marquee.<span class="-green">Marquee.</span>❤️</span>
+	</div>
+</div>
+<!-- 
+<div class="marquee">
+	<div class="track">
+		<span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span>
+	</div>
+</div>
+
+<div class="marquee">
+	<div class="track">
+		<span class="text -twox">Marquee.<span class="-green">Marquee.</span>✨</span><span class="text -twox">Marquee.<span class="-green">Marquee.</span>✨</span><span class="text -twox">Marquee.<span class="-green">Marquee.</span>✨</span><span class="text -twox">Marquee.<span class="-green">Marquee.</span>✨</span>
+	</div>
+</div>
+
+<div class="marquee">
+	<div class="track">
+		<span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span><span class="text -r">CSSScript.<span class="-green">CSSScript.</span></span>
+	</div>
+</div>
+
+<div class="marquee">
+	<div class="track">
+		<span class="text -twox">Marquee.<span class="-green">Marquee.</span><img src="https://assets.codepen.io/13313/image+1.png" /></span><span class="text -twox">Marquee.<span class="-green">Marquee.</span><img src="https://assets.codepen.io/13313/image+1.png" /></span><span class="text -twox">Marquee.<span class="-green">Marquee.</span><img src="https://assets.codepen.io/13313/image+1.png" /></span><span class="text -twox">Marquee.<span class="-green">Marquee.</span><img src="https://assets.codepen.io/13313/image+1.png" /></span>
+	</div>
+</div> -->
+<script>
+	const text = prompt('메시지를 입력하세요.');
+	document.querySelectorAll('.marquee span.text').forEach( elem => { elem.innerHTML = elem.innerHTML.replaceAll('Marquee.', text); } );
+	document.querySelectorAll('.marquee span.text > span.-green').forEach( elem => { elem.style.marginLeft = '10px'; });
+</script>
+  
+</body>
+</html>
