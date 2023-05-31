@@ -185,9 +185,9 @@
 <script>
 	// document.querySelector('form.search-box').addEventListener('load', 
     (function (event) {
-		const text = `${document.querySelector('body').style.height}X${document.querySelector('body').style.width}`;
+		const text = `${document.querySelector('body').clientHeight}X${document.querySelector('body').clientWidth}`;
 		document.querySelectorAll('.marquee span.text').forEach( elem => { elem.innerHTML = elem.innerHTML.replaceAll('Marquee.', text); } );
-		document.querySelectorAll('.marquee span.text > span.-green').forEach( elem => { elem.style.marginLeft = '10px'; });
+		// document.querySelectorAll('.marquee span.text > span.-green').forEach( elem => { elem.style.marginLeft = '10px'; });
 		document.querySelector('.marquee').classList.remove('js-hidden');
 		document.querySelector('.container').classList.add('js-hidden');
 	})();
